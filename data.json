@@ -1,0 +1,53 @@
+{
+  "fish": [
+    {
+      "id": 1,
+      "name": "Lemon",
+      "owner": "Fred",
+      "image": "/images/fish1.jpg",
+      "breed": "YellowFish"
+    },
+    {
+      "id": 2,
+      "name": "Spike",
+      "owner": "Chloe",
+      "image": "/images/fish2.jpg",
+      "breed": "Lion Fish"
+    },
+    {
+      "id": 3,
+      "name": "Bruno",
+      "owner": "Michael",
+      "image": "/images/fish3.jpg",
+      "breed": "Shark"
+    },
+    {
+      "id": 4,
+      "name": "Quimby",
+      "owner": "Sam",
+      "image": "/images/fish4.jpg",
+      "breed": "Stripped Fish"
+    },
+    {
+      "id": 5,
+      "name": "Gillian",
+      "owner": "Matthew",
+      "image": "/images/fish5.jpg",
+      "breed": "Carp"
+    },
+    {
+      "id": 6,
+      "name": "Krusty",
+      "owner": "Brianna",
+      "image": "/images/fish6.jpg",
+      "breed": "Clown Fish"
+    },
+    {
+      "id": 7,
+      "name": "Bob",
+      "owner": "Ricky",
+      "image": "/images/fish7.jpg",
+      "breed": "Dog Fish"
+    }
+  ]
+}
