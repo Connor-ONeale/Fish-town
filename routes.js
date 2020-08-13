@@ -5,8 +5,12 @@ const fs = require('fs')
 //const { request } = require('http')
 //const server = require('./server')
 
-router.send('/', (req, res) => {
-    console.log("hello")
+router.get('/', (req, res) => {
+    fs.readFile('./data.json', 'utf8' ,(err, data) => {
+        if(err) throw err 
+        const obj = JSON.parse(data)
+    res.render("puppies/index", obj)
   })
+})
 
   module.exports = router
