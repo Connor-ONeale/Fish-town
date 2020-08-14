@@ -1,11 +1,11 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
 }
 
 .app {
@@ -34,8 +34,10 @@ justify-content: center;
 
 .nav {
   font-size: 3rem;
-  color: #ffffff;
+  color: #000;
+  text-decoration: none;
 }
+
 h1 {
 font-family: 'Sriracha', cursive;
 font-size: 5rem;
@@ -64,15 +66,41 @@ color: greenyellow;
 }
 
 .card {
+display: flex;
+align-items: center;
+justify-content: center;
 background: rgba(171, 169, 169, 0.85);
 height: vh;
 width: 300px;
 height: 450px;
 border-radius: 1rem;
 }
-/* .container {
-background: #fff;
-height: 50vh;
-width: 50vw;
-z-index: 10;
-} */
+
+.card-form {
+display: flex;
+align-items: center;
+justify-content: center;
+background: rgba(171, 169, 169, 0.85);
+height: vh;
+width: 350px;
+height: 550px;
+border-radius: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+fieldset {
+  margin-bottom: .5rem;
+}
+button {
+  border-radius: 5px;
+}
+
+.class1 {
+  visibility: hidden;
+}
