@@ -34,7 +34,8 @@ justify-content: center;
 
 .nav {
   font-size: 3rem;
-  color: #ffffff;
+  color: #000;
+  text-decoration: none;
 }
 
 h1 {
