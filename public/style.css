@@ -99,9 +99,7 @@ fieldset {
 button {
   border-radius: 5px;
 }
-/* .container {
-background: #fff;
-height: 50vh;
-width: 50vw;
-z-index: 10;
-} */
+
+.class1 {
+  visibility: hidden;
+}
