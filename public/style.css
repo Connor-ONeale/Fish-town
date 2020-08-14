@@ -63,6 +63,7 @@ color: greenyellow;
   object-fit: cover;
   width: 230px;
   height: 230px;
+  border: 8px solid white;
 }
 
 .card {
