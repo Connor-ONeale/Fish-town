@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     fs.readFile('./data.json', 'utf8' ,(err, data) => {
         if(err) throw err 
         const obj = JSON.parse(data)
-    res.render("puppies/index", obj)
+    res.render("fish/index", obj)
   })
 })
 
