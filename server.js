@@ -4,6 +4,17 @@ const fs = require('fs')
 // const { request } = require('http')
 const hbs = require('express-handlebars')
 const server = express()
+
+// Middleware
+server.engine('hbs', hbs({
+  defaultLayout: 'main',
+  extname: 'hbs'
+}))
+
+server.set('view engine', 'hbs')
+server.use(express.static('public'))
+server.use(express.urlencoded({extended: false}))
+
 //const fish = require('./data.json')
 
 server.get('/', (req, res) => {
@@ -45,6 +56,7 @@ server.get('/fish/edit/:id', (req, res) =>{
 
 
 server.post('/fish/edit/:id', (req, res) => {
+  console.log('p:', req.body)
   const id = req.params.id
   const filePath = "./data.json"
   fs.readFile(filePath, 'utf8' ,(err, data) => {
@@ -52,12 +64,13 @@ server.post('/fish/edit/:id', (req, res) => {
       if (err){
       throw err;
       } else {
+        console.log(obj)
           obj.fish.map(e => {
               if(e.id ==id) {
-                e.name= req.params.name
-                e.breed= req.params.breed 
-                e.owner= req.params.owner
-                e.image= req.params.image 
+                e.name= req.body.name
+                e.breed= req.body.breed 
+                e.owner= req.body.owner
+                e.image= req.body.image 
               }
           })
           fs.writeFile(filePath, JSON.stringify(obj, null, 2), (err)=>{
@@ -67,15 +80,7 @@ server.post('/fish/edit/:id', (req, res) => {
     });
 })
 
-// Middleware
-server.engine('hbs', hbs({
-  defaultLayout: 'main',
-  extname: 'hbs'
-}))
 
-server.set('view engine', 'hbs')
-server.use(express.static('public'))
-server.use(express.urlencoded({extended: false}))
 //server.use('/', server)
 
 module.exports = server
