@@ -32,6 +32,44 @@ server.get('/fish/:id', (req, res) => {
   })
 })
 
+server.get('/fish/edit/:id', (req, res) =>{
+  let id = req.params.id
+  fs.readFile('./data.json', 'utf8' ,(err, data) => {
+      if(err) throw err 
+      const obj = JSON.parse(data)
+//      console.log(obj)
+      const eFish = obj.fish.find(e => e.id == id)
+      res.render('fish/edit', eFish)
+  })
+})
+
+
+server.post('/fish/edit/:id', (req, res) => {
+  const id = req.params.id
+  const filePath = "./data.json"
+  fs.readFile(filePath, 'utf8' ,(err, data) => {
+      const obj = JSON.parse(data)
+      if (err){
+      throw err;
+      } else {
+          obj.fish.map(e => {
+              if(e.id ==id) {
+                e.name= req.body.name
+                e.breed= req.body.breed 
+                e.owner= req.body.owner 
+              }
+          })
+          fs.writeFile(filePath, JSON.stringify(obj, null, 2), (err)=>{
+              res.redirect("/fish/"+id)
+          })  
+          
+      }
+      // console.log(req.body)
+      // console.log(pupUpdate)
+      // console.log(obj);
+    });
+})
+
 // Middleware
 server.engine('hbs', hbs({
   defaultLayout: 'main',
