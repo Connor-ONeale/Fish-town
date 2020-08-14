@@ -1,0 +1,30 @@
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.viewport-header {
+position: relative;
+height: 100vh;
+text-align: center;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+}
+
+h1 {
+font-family: 'Sriracha', cursive;
+font-size: 3rem;
+}
+
+/* .container {
+background: #fff;
+height: 50vh;
+width: 50vw;
+z-index: 10;
+} */

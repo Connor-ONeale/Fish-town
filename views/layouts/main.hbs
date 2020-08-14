@@ -3,13 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Fish Town</title>
+      <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <div class="app">
       <h1 class="title">Fish Town</h1>
       <a class="nav" href="/">Home</a>
-      {{{body}}}
-    </div>
+      <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+        <source src="underwater.webm" type="video/webm">
+        <source src="/images/underwater.mp4" type="video/mp4">
+      </video>
+
+      <header class="viewport-header">
+        <h1>
+          Explore Fishtown
+        </h1>
+    </header>
+    {{{body}}}
   </body>
 </html>
