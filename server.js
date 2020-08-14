@@ -10,8 +10,6 @@ server.get('/', (req, res) => {
     fs.readFile('./data.json', 'utf8' ,(err, data) => {
         if(err) throw err 
         const obj = JSON.parse(data)
-        console.log("_---------------------")
-        console.log(obj)
     res.render("fish/index", obj)
   })
 })
@@ -24,7 +22,7 @@ server.get('/fish', (req, res) => {
 })
 })
 
-server.get('/:id', (req, res) => {
+server.get('/fish/:id', (req, res) => {
   let id = req.params.id
   fs.readFile('./data.json', 'utf8' ,(err, data) => {
       if(err) throw err 
