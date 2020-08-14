@@ -8,11 +8,7 @@
       "breed": "YellowFish"
     },
     {
-      "id": 2,
-      "name": "Spike",
-      "owner": "Chloe",
-      "image": "/images/fish2.jpg",
-      "breed": "Lion Fish"
+      "id": 2
     },
     {
       "id": 3,
