@@ -1,3 +1,18 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
 video {
   object-fit: cover;
   width: 100vw;
@@ -10,20 +25,21 @@ video {
 
 .viewport-header {
 position: relative;
-height: 100vh;
+flex-direction: column;
 text-align: center;
 display: flex;
-align-items: flex-start;
+align-items: center;
 justify-content: center;
 }
 
 .nav {
-  font-size: 1.5rem;
-  color: red;
+  font-size: 3rem;
+  color: #ffffff;
 }
 h1 {
 font-family: 'Sriracha', cursive;
-font-size: 3rem;
+font-size: 5rem;
+color: greenyellow;
 }
 
 .fish-list {
@@ -45,6 +61,14 @@ font-size: 3rem;
   object-fit: cover;
   width: 230px;
   height: 230px;
+}
+
+.card {
+background: rgba(171, 169, 169, 0.85);
+height: vh;
+width: 300px;
+height: 450px;
+border-radius: 1rem;
 }
 /* .container {
 background: #fff;
