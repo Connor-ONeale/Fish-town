@@ -1,21 +1,32 @@
-<form class="form" action="/fish/edit/{{id}}" method="post">
-  <img class="img-circle" src="{{image}}" alt="{{name}}">
-  <label for="name" class="form-item">
-    Name:
-    <input type="text" name="name" value="{{name}}">
-  </label>
-  
-  <label for="breed" class="form-item">
-    Breed:
-    <input type="text" name="breed" value="{{breed}}">
-  </label>
-  
-  <label for="owner" class="form-item">
-    Owner:
-    <input type="text" name="owner" value="{{owner}}">
-  </label>
-  
-  <input type="hidden" name="image" value="{{image}}">
-  
-  <input type="submit" name="" value="Submit">
-</form>
+<div class="container">
+  <div class="card-form">
+    <form class="form" action="/fish/edit/{{id}}" method="post">
+    <img class="img-circle" src="{{image}}" alt="{{name}}">
+    
+    <fieldset>
+       <label for="name" class="form-item">
+      Name:
+      <input type="text" name="name" value="{{name}}">
+    </label>
+    </fieldset>
+   
+    <fieldset>
+      <label for="breed" class="form-item">
+      Breed:
+      <input type="text" name="breed" value="{{breed}}">
+      </label>
+    </fieldset>
+    
+    <fieldset>
+      <label for="owner" class="form-item">
+      Owner:
+      <input type="text" name="owner" value="{{owner}}">
+      </label>
+    </fieldset>
+      {{!-- <input type="hidden" name="image" value="{{image}}"> --}}
+      <button type="submit" name="" value="Submit">Submit</button>
+
+    </form>
+  </div>
+</div>
+
