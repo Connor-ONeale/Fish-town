@@ -56,7 +56,8 @@ server.post('/fish/edit/:id', (req, res) => {
               if(e.id ==id) {
                 e.name= req.body.name
                 e.breed= req.body.breed 
-                e.owner= req.body.owner 
+                e.owner= req.body.owner
+                e.image= req.body.image 
               }
           })
           fs.writeFile(filePath, JSON.stringify(obj, null, 2), (err)=>{
