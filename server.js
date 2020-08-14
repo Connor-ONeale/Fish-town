@@ -62,12 +62,8 @@ server.post('/fish/edit/:id', (req, res) => {
           })
           fs.writeFile(filePath, JSON.stringify(obj, null, 2), (err)=>{
               res.redirect("/fish/"+id)
-          })  
-          
+          })     
       }
-      // console.log(req.body)
-      // console.log(pupUpdate)
-      // console.log(obj);
     });
 })
 
